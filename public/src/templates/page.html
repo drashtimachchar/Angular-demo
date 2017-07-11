@@ -1,0 +1,32 @@
+<div class="container">
+	<header class="home" ng-if= "showHeader">
+		<h1>Welcome to page</h1>
+	</header>
+	<nav class="navbar navbar-inverse fixed-header" role="navigation">
+    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+            <li  ui-sref-active="active-link">
+                <a ui-sref="page.page1" ui-sref-active="active">Home</a>
+            </li>
+            <li ui-sref-active="active-link">
+                 <a ui-sref="page.page2" ui-sref-active="active">About</a>
+            </li>
+            <li ui-sref-active="active-link">
+                 <a ui-sref="page.page3" ui-sref-active="active">Pricing</a>
+            </li>
+        </ul>
+        <div class="logout">
+            <button class="btn btn-lg btn-primary" type="submit" ng-click="vm.logout()">Logout</button>
+        </div>
+    </div>
+    <!-- /.navbar-collapse -->
+    </nav>   
+	<ui-view></ui-view>
+</div>
+<div id="footer" ng-if= "showFooter">
+        <div class="container">
+            <p>&nbsp;</p>
+            <p class="footer">Copyright ©RouteDemo.com</p>
+        </div>
+</div>
